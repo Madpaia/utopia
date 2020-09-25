@@ -15,7 +15,7 @@ ANDREOTTI && ANDREOTTI.parentNode.removeChild(ANDREOTTI);
 document.querySelector("body news-app").root.querySelector("iron-pages news-article").root.querySelector("div.container div.content amp-viewer div.amp-doc-host").shadowRoot.querySelector("body main article div.detail-article_container div.detail-article_body div[subscriptions-section='content']").removeAttribute("subscriptions-section");
 ```
 
-aprire la pagina di www.repubblica.it coni contenuti protetti
+aprire la pagina di www.repubblica.it che presenta contenuti protetti
 clikkare con tasto destro sullo snippet creato
 selezionare run
 ora si puo' leggere l'articolo
