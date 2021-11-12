@@ -10,9 +10,41 @@ aprire chrome
  - '+ New Snippet'
 sul frame a destra incollate lo script:
 ```
-ANDREOTTI = document.querySelector("body news-app").root.querySelector("iron-pages news-article").root.querySelector("div.container div.content amp-viewer div.amp-doc-host").shadowRoot.querySelector("body main article div.detail-article_container div.detail-article_body section");
-ANDREOTTI && ANDREOTTI.parentNode.removeChild(ANDREOTTI);
-document.querySelector("body news-app").root.querySelector("iron-pages news-article").root.querySelector("div.container div.content amp-viewer div.amp-doc-host").shadowRoot.querySelector("body main article div.detail-article_container div.detail-article_body div[subscriptions-section='content']").removeAttribute("subscriptions-section");
+destroy_community = (italy, children, family) => {
+    italy.querySelector(family).getElementsByClassName(children).map(
+        child => child.parentNode.removeChild(child)
+    )
+}
+
+craxy_cleanup = (iframe) => {
+    var judiciary = "body > main > div > article > div.story__wrapper > div > div:nth-child(2)"
+    var italy = iframe.contentWindow.document
+    var freedom = italy.querySelector(judiciary)
+    freedom.parentNode.removeChild(freedom)
+    var citizen_rights = italy.querySelector(judiciary)
+    citizen_rights.removeAttribute("subscriptions-section")
+    destroy_community(italy, "adv-container", judiciary)
+}
+
+control_power = (doc, url) => {
+    var crack = doc.createElement("iframe")
+    crack.setAttribute("src", url)
+    crack.style.width = "100%"
+    crack.style.height = "976px"
+    return crack
+}
+
+andreotti_proxy = (doc, url) => {
+    var italy = doc.body
+    while (italy.firstChild) {
+        italy.removeChild(italy.lastChild)
+    }
+    var p2 = control_power(doc, url)
+    p2.onload = () => craxy_cleanup(p2)
+    doc.body.appendChild(p2)
+}
+
+andreotti_proxy(document, window.location.pathname + "amp/")
 ```
 
 aprire la pagina di www.repubblica.it che presenta contenuti protetti
