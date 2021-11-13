@@ -10,8 +10,8 @@ aprire chrome
  - '+ New Snippet'
 sul frame a destra incollate lo script:
 ```
-destroy_community = (italy, children, family) => {
-    italy.querySelector(family).getElementsByClassName(children).map(
+destroy_community = (italy, children) => {
+    italy.getElementsByClassName(children).map(
         child => child.parentNode.removeChild(child)
     )
 }
