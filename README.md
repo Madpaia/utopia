@@ -1,5 +1,4 @@
 # utopia
-Utopia: a truly free repubblica 
 
 aggiungete il codice seguente come nuovo snippet in chrome.
 
